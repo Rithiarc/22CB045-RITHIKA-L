@@ -15,6 +15,12 @@ jobs:
         
       - name: npm run test
         run: npm run test
+
+      - name: deploy to github pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
       
         
       
